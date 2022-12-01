@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+<body>
+    <h1>Home</h1>
+    <p><%= content %></p>
+    <% console.log(compose);%>
+<!--instead of this for loop we can use forEach see below-->
+
+<!--    forEach;  method using in Array instead of-->
+    <%compose.forEach(function(post){%>
+    <!--    console.log(mimi.title);-->
+    <h1><%=post.title%></h1>
+    <p>
+        <%=post.content.substring(0,100)+" ........."%>
+        <a href="/posts/<%=post.title%>" >Read More</a>
+    </p>
+    <% });%>
+
+
+</body>
+<%- include("partials/footer") -%>
